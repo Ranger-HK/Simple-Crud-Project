@@ -7,6 +7,55 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : Ravindu
 */
 
+/*LANDING PAGE*/
+
+html,body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.banner{
+    height: 100vh;
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#box{
+    position: absolute;
+    top: 200px;
+    right: 700px;
+    left: 0;
+    color: white;
+    font-size: 80px;
+
+}
+
+
+
+#box .info a{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: #ecf0f1;
+    background: #8e44ad;
+    padding: 10px;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+#box > .info > a:hover{
+    background: #f39c12;
+}
+
+
+
+/*LOGIN*/
+
 html,body{
     background-image: url('https://getwallpapers.com/wallpaper/full/e/c/4/92616.jpg');
     background-size: cover;
@@ -46,7 +95,7 @@ form>div:nth-child(2){
     position: relative;
     top: 40px;
     height: 50px;
-    
+
 }
 
 .social_icon span{
@@ -62,7 +111,7 @@ form>div:nth-child(2){
 
 .card-header h1{
     color: white;
-    
+
 }
 
 .social_icon{
@@ -139,4 +188,4 @@ input:focus{
     left: 200px;
     bottom:30px;
 }
-  
+

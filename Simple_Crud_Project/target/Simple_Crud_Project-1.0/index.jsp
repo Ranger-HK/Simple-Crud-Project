@@ -1,83 +1,32 @@
-
-<!--    Created on : Oct 27, 2022, 12:49:24 PM
+<%-- 
+    Document   : index
+    Created on : Oct 27, 2022, 2:59:59 PM
     Author     : Ravindu
+--%>
 
--->
-
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login Form</title>
+        <title>Landing Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="assets/boostrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="assets/css/stylesheet.css"/>
-        <link rel="stylesheet" href="assets/fonts/css/all.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Work+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <div class="d-flex justify-content-center h-100">
-                <div class="card">
-                    <div class="card-header">
-                        <h1>Sign In</h1>  
-                        <div class="d-flex justify-content-end social_icon">
-                            <span><i class="fa-brands fa-square-github"></i></i></i></span>
-                            <span><i class="fab fa-google-plus-square"></i></span>
-                            <span><i class="fab fa-twitter-square"></i></span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="input-group form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="username">
-
-                            </div>
-
-                            <div class="input-group form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                </div>
-                                <input type="password" class="form-control" placeholder="password">
-                            </div>
-
-                            <div class="row align-items-center remember">
-                                <input type="checkbox">Remember Me
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Login" class="btn float-right login_btn">
-                            </div>
-                        </form>
-                    </div> 
-
-                    <div class="card-footer">
-                        <div class="d-flex justify-content-center links">
-                            If You Don't Have An Account?<a href="#">Register</a>
-                        </div>
-                        <div class="rights">
-                            <small>Created By Ravindu Prathibha</small>
-                     
-                        </div>
-                        
-                         <div class="lines">
-                             <hr>
-                         </div>
-                        
-                        
-                    </div>
 
 
-                </div>  
+        <img alt="wallpaper" src="assets/img/navy-blue-smoky-art-abstract-background.jpg" class="banner">
+        <div id="box">
+            <div class="col-md-8 offset-md-2 info">
+                <h1 class='text-center'>Hello and Welcome to Epic Lanka</h1>
+                <a href="Login.jsp" class="btn btn-md text-center">Let's Get Started</a>
+
             </div>
+
+        </div>
     </body>
 </html>
-
