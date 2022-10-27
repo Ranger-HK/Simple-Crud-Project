@@ -17,6 +17,9 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+        
+<!--        /*USER REGISTRATION*/-->
+
         <style>
 
 
@@ -112,9 +115,10 @@
                 color: #ecf0f1;
                 background: #f39c12;
                 font-size: 25px;
-                font-weight: 800;
+                font-weight: 600;
                 left: 268px;
                 top: 14px;
+                border-radius: 12px;
             }
 
 
@@ -127,6 +131,8 @@
                 top: 8px;
                 width: 430px;
                 left: 156px;
+                border-radius: 12px;
+                font-weight: 600;
             }
 
 
