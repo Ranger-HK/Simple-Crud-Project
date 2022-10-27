@@ -34,6 +34,7 @@
                         </div>
                     </div>
                     <div class="card-body">
+
                         <form>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
@@ -54,30 +55,32 @@
                                 <input type="checkbox">Remember Me
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Login" class="btn float-right login_btn">
+                                <input type="button" value="Login" class="btn float-right login_btn">
                             </div>
                         </form>
                     </div> 
 
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">
-                            If You Don't Have An Account?<a href="#">Register</a>
+                            If You Don't Have An Account?<a href="Registration.jsp">Register</a>
                         </div>
                         <div class="rights">
                             <small>Created By Ravindu Prathibha</small>
-                     
+
                         </div>
-                        
-                         <div class="lines">
-                             <hr>
-                         </div>
-                        
-                        
+
+                        <div class="lines">
+                            <hr>
+                        </div>
+
+
                     </div>
-
-
-                </div>  
+                </div>
             </div>
-    </body>
+
+
+        </div>  
+    </div>
+</body>
 </html>
 

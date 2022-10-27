@@ -45,7 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 }
 
 #box > .info > a:hover{
-     background: #73777C;
+    background: #73777C;
 }
 
 
@@ -184,4 +184,7 @@ input:focus{
     left: 200px;
     bottom:30px;
 }
+
+
+/*USER REGISTRATION*/
 
