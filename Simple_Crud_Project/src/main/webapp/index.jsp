@@ -20,10 +20,12 @@
 
 
         <img alt="wallpaper" src="assets/img/navy-blue-smoky-art-abstract-background.jpg" class="banner">
+        
+        
         <div id="box">
             <div class="col-md-8 offset-md-2 info">
-                <h1 class='text-center'>Hello and Welcome to Epic Lanka</h1>
-                <a href="Login.jsp" class="btn btn-md text-center">Let's Get Started</a>
+                <h1 class='text-center'>Hello and Welcome To Epic Lanka !</h1>
+                <a href="Login.jsp" class="btn btn-md text-center">Let's Get Started >>></a>
 
             </div>
 

@@ -9,14 +9,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 
 /*LANDING PAGE*/
 
-html,body{
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-
-}
-
 .banner{
     height: 100vh;
     width: 100%;
@@ -25,31 +17,35 @@ html,body{
     background-repeat: no-repeat;
 }
 
-
 #box{
     position: absolute;
-    top: 200px;
-    right: 700px;
-    left: 0;
+    top: 100px;
+    right:800px;
+    left: -10px;
     color: white;
-    font-size: 80px;
+    font-size:120px;
 
 }
 
-
+.text-center{
+    font-size: 80px;
+    font-weight:900;
+    font-family:'Work Sans', sans-serif;
+}
 
 #box .info a{
     margin-left: 50%;
     transform: translateX(-50%);
     color: #ecf0f1;
-    background: #8e44ad;
-    padding: 10px;
+    background: #f39c12;
+    padding: 20px;
     font-size: 38px;
     font-weight: 800;
+    width: 500px;
 }
 
 #box > .info > a:hover{
-    background: #f39c12;
+     background: #73777C;
 }
 
 
