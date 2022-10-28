@@ -159,7 +159,7 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa-solid fa-image-portrait"></i></span>
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter User Id" />
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Id" />
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" />
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa-regular fa-address-card"></i></span>
-                                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter You Address" />
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your Address" />
                                     </div>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your Email" />
                                     </div>
                                 </div>
                             </div>
