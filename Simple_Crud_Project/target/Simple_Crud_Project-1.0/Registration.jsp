@@ -133,7 +133,7 @@
             }
 
 
-           
+
 
 
 
@@ -146,14 +146,14 @@
                 <div class="user-card">
                     <div class="card-header">
                         <h1>Register</h1>
-                       
+
 
                     </div>
                     <div class="card-body">
 
 
                         <form class="form-horizontal" method="post" action="#">
-                            
+
                             <div class="form-group">
                                 <label for="name" class="cols-sm-2 control-label">User Id</label>
                                 <div class="cols-sm-10">

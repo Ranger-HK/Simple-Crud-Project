@@ -17,7 +17,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      
+
 
     </head>
     <body>
@@ -55,7 +55,7 @@
                             </div>
                             <div class="form-group">
                                 <a href="Home.jsp"><input type="button" value="Login" class="btn float-right login_btn"></a> 
-                                
+
                             </div>
                         </form>
                     </div> 
