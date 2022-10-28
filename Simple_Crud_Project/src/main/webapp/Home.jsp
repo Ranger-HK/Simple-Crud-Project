@@ -13,7 +13,9 @@
         <link rel="stylesheet" href="assets/boostrap/css/bootstrap.min.css"/>
         <!--                 <link rel="stylesheet" href="assets/css/stylesheet.css"/>-->
         <link rel="stylesheet" href="assets/fonts/css/all.css"/>
-
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <style>
 
 
@@ -28,7 +30,7 @@
 
             .table-success{
                 position: relative;
-                top: 100px;
+                top:50px;
                 border: 2px solid black
             }
 
@@ -36,12 +38,16 @@
                 position: relative;
                 color: black;
                 background-color: #ffbf01;
-                border-radius: 11px;
-                top: -376px;
-                left: 1747px;
+                border-radius: 50px;
+                top: 24px;
+                left: 1708px;
                 font-size: 25px;
                 font-weight: 800;
+                width: 179px;
+
+
             }
+
 
             .btn-success{
                 position: relative;
@@ -53,10 +59,28 @@
                 font-size: 25px;
                 font-weight: 800;
             }
+
+            .custab{
+                border: 1px solid #ccc;
+                padding: 5px;
+                margin: 5% 0;
+                box-shadow: 3px 3px 2px #ccc;
+                transition: 0.5s;
+
+            }
+            .custab:hover{
+                box-shadow: 3px 3px 0px transparent;
+                transition: 0.5s;
+            }
         </style>
     </head>
 
     <body>
+        <div >
+            <a href="Login.jsp"<button type="button" class="btn btn-primary btn-lg btn-block login-button">Log Out</button></a>
+        </div>
+
+
 
         <table class="table table-success table-striped">
 
@@ -68,8 +92,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Contact</th>
                     <th scope="col">Password</th>
-                    <th scope="row">Update</th>
-                    <th scope="row">Delete</th>
+                    <th class="text-center">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -80,8 +103,9 @@
                     <th>Ravindu@gmail.com</th>
                     <th>+94 764618605</th>
                     <th>R1999</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+
                 </tr>
                 <tr>
                     <th>U001</th>
@@ -90,8 +114,8 @@
                     <th>Ravindu@gmail.com</th>
                     <th>+94 764618605</th>
                     <th>R1999</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
                 </tr>
                 <tr>
                     <th>U001</th>
@@ -100,8 +124,17 @@
                     <th>Ravindu@gmail.com</th>
                     <th>+94 764618605</th>
                     <th>R1999</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
                 </tr>
                 <tr>
                     <th>U001</th>
@@ -110,8 +143,8 @@
                     <th>Ravindu@gmail.com</th>
                     <th>+94 764618605</th>
                     <th>R1999</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
                 </tr>
                 <tr>
                     <th>U001</th>
@@ -120,8 +153,8 @@
                     <th>Ravindu@gmail.com</th>
                     <th>+94 764618605</th>
                     <th>R1999</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
                 </tr>
                 <tr>
                     <th>U001</th>
@@ -130,8 +163,8 @@
                     <th>Ravindu@gmail.com</th>
                     <th>+94 764618605</th>
                     <th>R1999</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
                 </tr>
                 <tr>
                     <th>U001</th>
@@ -140,16 +173,193 @@
                     <th>Ravindu@gmail.com</th>
                     <th>+94 764618605</th>
                     <th>R1999</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
+                </tr>
+                <tr>
+                    <th>U001</th>
+                    <th>Ravindu</th>
+                    <th>Bandaragama</th>
+                    <th>Ravindu@gmail.com</th>
+                    <th>+94 764618605</th>
+                    <th>R1999</th>
+                    <td class="text-center"><a class="btn btn-warning" href="Update.jsp">Update</a> 
+                        <a class="btn btn-danger" href="Update.jsp">Delete</a> 
                 </tr>
             </tbody>
         </table>
 
-        <a href="Update.jsp"><button type="button" class="btn btn-success">Update</button></a>
-        <div class="form-group ">
-            <a href="Login.jsp"  <button type="button" class="btn btn-primary btn-lg btn-block login-button">Log Out</button></a>
-        </div>
+
 
 
 
