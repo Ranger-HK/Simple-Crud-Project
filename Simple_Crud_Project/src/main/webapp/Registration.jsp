@@ -152,14 +152,14 @@
                     <div class="card-body">
 
 
-                        <form class="form-horizontal" method="post" action="#">
+                        <form class="form-horizontal" method="post" id="registerForm" action="#">
 
                             <div class="form-group">
                                 <label for="name" class="cols-sm-2 control-label">User Id</label>
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa-solid fa-image-portrait"></i></span>
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Id" />
+                                        <input type="text" class="form-control" name="name" id="txtuserID" placeholder="Enter Your Id" />
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" />
+                                        <input type="text" class="form-control" name="name" id="txtuserName" placeholder="Enter Your Name" />
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa-regular fa-address-card"></i></span>
-                                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your Address" />
+                                        <input type="text" class="form-control" name="email" id="txtaddress" placeholder="Enter Your Address" />
                                     </div>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your Email" />
+                                        <input type="text" class="form-control" name="email" id="txtemail" placeholder="Enter Your Email" />
                                     </div>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter Your Contact" />
+                                        <input type="text" class="form-control" name="username" id="txtcontact" placeholder="Enter Your Contact" />
                                     </div>
                                 </div>
                             </div>
@@ -212,14 +212,14 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+                                        <input type="password" class="form-control" name="password" id="txtpassword" placeholder="Enter your Password" />
                                     </div>
                                 </div>
                             </div>
 
 
                             <div class="form-group ">
-                                <button type="button" class="btn btn-primary btn-lg btn-block login-button">REGISTRATION</button>
+                                <button type="button" id="btnSave" class="btn btn-primary btn-lg btn-block login-button">REGISTRATION</button>
                             </div>
                             <a href="Login.jsp" class="btn btn-md text-center">Go To Login</a>
 
@@ -230,5 +230,9 @@
             </div>
         </div>
     </div>
+    <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="controller/SignUpController.js"></script>
 </body>
 </html>

@@ -6,35 +6,36 @@ package com.mycompany.simple_crud_project.model;
 
 /**
  *
- * @author ravindu
+ * @author Ravindu
  */
 public class Registration {
 
-    private String name;
+    private String userID;
+    private String userName;
     private String address;
     private String email;
-    private String telephone_Number;
-    private String user_Id;
+    private String contact;
     private String password;
 
-    public Registration() {
+    @Override
+    public String toString() {
+        return "Registration{" + "userID=" + userID + ", userName=" + userName + ", address=" + address + ", email=" + email + ", contact=" + contact + ", password=" + password + '}';
     }
 
-    public Registration(String name, String address, String email, String telephone_Number, String user_Id, String password) {
-        this.name = name;
-        this.address = address;
-        this.email = email;
-        this.telephone_Number = telephone_Number;
-        this.user_Id = user_Id;
-        this.password = password;
+    public String getUserID() {
+        return userID;
     }
 
-    public String getName() {
-        return name;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getAddress() {
@@ -53,20 +54,12 @@ public class Registration {
         this.email = email;
     }
 
-    public String getTelephone_Number() {
-        return telephone_Number;
+    public String getContact() {
+        return contact;
     }
 
-    public void setTelephone_Number(String telephone_Number) {
-        this.telephone_Number = telephone_Number;
-    }
-
-    public String getUser_Id() {
-        return user_Id;
-    }
-
-    public void setUser_Id(String user_Id) {
-        this.user_Id = user_Id;
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getPassword() {
@@ -77,9 +70,15 @@ public class Registration {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "Registration{" + "name=" + name + ", address=" + address + ", email=" + email + ", telephone_Number=" + telephone_Number + ", user_Id=" + user_Id + ", password=" + password + '}';
+    public Registration(String userID, String userName, String address, String email, String contact, String password) {
+        this.userID = userID;
+        this.userName = userName;
+        this.address = address;
+        this.email = email;
+        this.contact = contact;
+        this.password = password;
     }
 
+    public Registration() {
+    }
 }
