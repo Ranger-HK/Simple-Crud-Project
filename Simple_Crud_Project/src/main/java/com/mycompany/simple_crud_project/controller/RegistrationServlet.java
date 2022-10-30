@@ -35,7 +35,7 @@ public class RegistrationServlet extends HttpServlet {
     RegistrationBo registrationBo = new RegistrationBo();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {  //Read
 
         resp.setContentType("application/json");
         //resp.setCharacterEncoding("UTF-8");
@@ -74,7 +74,7 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException { //Create
         resp.setContentType("application/json");
 //        ServletContext servletContext = req.getServletContext();
 //        BasicDataSource bds = (BasicDataSource) servletContext.getAttribute("bds");
@@ -115,7 +115,7 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {  //Update
         resp.setContentType("application/json");
 
         //System.out.println("Ravindu");
@@ -156,9 +156,34 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        System.out.println("Ravindu");
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException { //Delete
+       resp.setContentType("application/json");
+        
+        //get userID Using getParameter Method
+        String userID = req.getParameter("userID");
+        System.out.println(userID);
+        
+        
         PrintWriter writer = resp.getWriter();
-
+        try {
+            if (registrationBo.deleteUser(userID)){
+                JsonObjectBuilder response = Json.createObjectBuilder();
+                response.add("status", 200);
+                response.add("message", "Successfuly deleted...");
+                response.add("data", "");
+                writer.print(response.build());
+            }else{
+                JsonObjectBuilder response = Json.createObjectBuilder();
+                response.add("status", 500);
+                response.add("message", "Wrong ID inserted...");
+                response.add("data", "");
+                writer.print(response.build());
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 }

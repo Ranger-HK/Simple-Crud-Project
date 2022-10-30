@@ -70,21 +70,35 @@
                 box-shadow: 3px 3px 0px transparent;
                 transition: 0.5s;
             }
+
+            .btn-danger{
+
+            }
+
+            .btn-secondary{
+
+            }
         </style>
     </head>
 
     <body>
+
         <div >
-           <a href="Login.jsp"><span><i class="fa-solid fa-circle-arrow-left" id="back"></i></span></a>
+            <a href="Login.jsp"><span><i class="fa-solid fa-circle-arrow-left" id="back"></i></span></a>
         </div>
+
+
         <div class="row align-items-end">
             <div class="col-5">
                 <button type="button" class="btn btn-danger btn-sm">Delete</button>
                 <button type="button" class="btn btn-secondary btn-sm">Update</button>
             </div>
         </div>
+
+
         <div class="row align-items-center">
             <div class="col-12 mt-2">
+
                 <table class="table table-success table-striped">
 
                     <thead class="table-dark">
@@ -98,28 +112,28 @@
                         </tr>
                     </thead>
                     <tbody id="userTable">
-<!--                        <tr>
-                            <th>U001</th>
-                            <th>Ravindu</th>
-                            <th>Bandaragama</th>
-                            <th>Ravindu@gmail.com</th>
-                            <th>+94 764618605</th>
-                            <th>R1999</th>
-                          
-
-                        </tr>-->
+                        <!--                        <tr>
+                                                    <th>U001</th>
+                                                    <th>Ravindu</th>
+                                                    <th>Bandaragama</th>
+                                                    <th>Ravindu@gmail.com</th>
+                                                    <th>+94 764618605</th>
+                                                    <th>R1999</th>
+                                                  
+                        
+                                                </tr>-->
 
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
+    <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="controller/UserController.js"></script>    
 
-        <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="controller/UserController.js"></script>    
 
-
-    </body>
+</body>
 
 </html>

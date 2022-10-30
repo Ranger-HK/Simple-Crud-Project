@@ -57,4 +57,24 @@ public class RegistrationBo {
                 registrationDTO.getPassword()
         ));
     }
+      
+        public boolean deleteUser(String userID) throws ClassNotFoundException, SQLException{
+        return registrationDao.deleteUser(userID);
+    }
+    
+//    public RegistrationDTO searchUser(String userID) throws ClassNotFoundException, SQLException{
+//        Registration searchUser = registrationDao.searchUser(userID);
+//        if (searchUser==null){
+//            return null;
+//        }else{
+//            return new RegistrationDTO(
+//                    searchUser.getUserID(),
+//                    searchUser.getUserName(),
+//                    searchUser.getAddress(),
+//                    searchUser.getEmail(),
+//                    searchUser.getContact(),
+//                    searchUser.getPassword()
+//            );
+//        }
+//    }
 }

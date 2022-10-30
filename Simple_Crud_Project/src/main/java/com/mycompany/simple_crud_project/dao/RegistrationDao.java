@@ -83,4 +83,38 @@ public class RegistrationDao {
             return false;
         }
     }
+     
+       
+    public boolean deleteUser(String userID) throws ClassNotFoundException, SQLException{
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
+        PreparedStatement pstm = con.prepareStatement("delete from Registration where userID=?");
+        pstm.setObject(1, userID);
+        
+        if (pstm.executeUpdate() > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+//    public Registration searchUser(String userID) throws ClassNotFoundException, SQLException{
+//        Class.forName("com.mysql.cj.jdbc.Driver");
+//        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/epic", "root", "1234");
+//        PreparedStatement pstm = con.prepareStatement("select * from Registration where userID=?");
+//        pstm.setObject(1, userID);
+//        ResultSet rst = pstm.executeQuery();
+//        if (rst.next()){
+//            return new Registration(
+//                    rst.getString(1),
+//                    rst.getString(2),
+//                    rst.getString(3),
+//                    rst.getString(4),
+//                    rst.getString(5),
+//                    rst.getString(6)
+//            );
+//        }else{
+//            return null;
+//        }
+//    }
 }
