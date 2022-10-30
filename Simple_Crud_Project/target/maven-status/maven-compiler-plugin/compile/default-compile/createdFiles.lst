@@ -1,0 +1,9 @@
+com\mycompany\simple_crud_project\controller\RegistrationServlet.class
+com\mycompany\simple_crud_project\model\Registration.class
+com\mycompany\simple_crud_project\dao\LoginDao.class
+com\mycompany\simple_crud_project\bo\RegistrationBo.class
+com\mycompany\simple_crud_project\bo\LoginBo.class
+com\mycompany\simple_crud_project\dao\RegistrationDao.class
+com\mycompany\simple_crud_project\db\DbConnection.class
+com\mycompany\simple_crud_project\dto\RegistrationDTO.class
+com\mycompany\simple_crud_project\controller\LoginServlet.class

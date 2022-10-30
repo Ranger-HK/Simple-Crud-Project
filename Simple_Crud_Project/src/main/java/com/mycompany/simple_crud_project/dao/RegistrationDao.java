@@ -65,4 +65,22 @@ public class RegistrationDao {
         
         return load;
     }
+    
+     public boolean updateUser(Registration registration) throws ClassNotFoundException, SQLException{
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
+        PreparedStatement pstm = con.prepareStatement("update Registration set userName=?, address=?, email=?, contact=?, password=? where userID=?");
+        pstm.setObject(1, registration.getUserName());
+        pstm.setObject(2, registration.getAddress());
+        pstm.setObject(3, registration.getEmail());
+        pstm.setObject(4, registration.getContact());
+        pstm.setObject(5, registration.getPassword());
+        pstm.setObject(6, registration.getUserID());
+        
+        if (pstm.executeUpdate() > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

@@ -46,4 +46,15 @@ public class RegistrationBo {
         return registrationList;
 
     }
+    
+      public boolean updateUser(RegistrationDTO registrationDTO) throws ClassNotFoundException, SQLException{
+        return registrationDao.updateUser(new Registration(
+                registrationDTO.getUserID(),
+                registrationDTO.getUserName(),
+                registrationDTO.getAddress(),
+                registrationDTO.getEmail(),
+                registrationDTO.getContact(),
+                registrationDTO.getPassword()
+        ));
+    }
 }
