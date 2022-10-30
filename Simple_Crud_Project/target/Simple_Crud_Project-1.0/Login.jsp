@@ -27,7 +27,7 @@
                     <div class="card-header">
                         <h1>Sign In</h1>  
                         <div class="d-flex justify-content-end social_icon">
-                            <a href="https://github.com/"> <span><i class="fa-brands fa-square-github"></i></i></i></span></a>
+                            <a href="https://github.com/"> <span><i class="fa-brands fa-square-github"></i></span></a>
                              <a href="https://www.google.com/"><span><i class="fab fa-google-plus-square"></i></span></a>
                              <a href="https://github.com/Ranger-HK?tab=repositories"><span><i class="fab fa-twitter-square"></i></span></a>
                         </div>

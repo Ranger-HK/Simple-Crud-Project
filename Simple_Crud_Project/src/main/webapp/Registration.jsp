@@ -11,7 +11,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Registration Form</title>
         <link rel="stylesheet" href="assets/boostrap/css/bootstrap.min.css"/>
-        <!--                 <link rel="stylesheet" href="assets/css/stylesheet.css"/>-->
         <link rel="stylesheet" href="assets/fonts/css/all.css"/>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
@@ -119,17 +118,24 @@
             }
 
 
-            .btn-md:hover{
+            .fa-light:hover{
                 background:#bdc3c7;
+
             }
 
             .btn-primary{
                 position: relative;
-                top: 8px;
+                top: 45px;
                 width: 430px;
                 left: 156px;
                 border-radius: 12px;
                 font-weight: 600;
+            }
+
+            #back{
+                font-size: 50px;
+                top: -688px;
+                left: 696px;
             }
 
 
@@ -146,6 +152,7 @@
                 <div class="user-card">
                     <div class="card-header">
                         <h1>Register</h1>
+
 
 
                     </div>
@@ -166,7 +173,7 @@
 
 
                             <div class="form-group">
-                                <label for="name" class="cols-sm-2 control-label">Name</label>
+                                <label for="name" class="cols-sm-2 control-label">User Name</label>
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
@@ -218,12 +225,14 @@
                             </div>
 
 
+
                             <div class="form-group ">
-                                <button type="button" id="btnSave" class="btn btn-primary btn-lg btn-block login-button">REGISTRATION</button>
+                                <button type="button" id="btnSave" class="btn btn-primary btn-lg btn-block login-button">Registration</button>
                             </div>
-                            <a href="Login.jsp" class="btn btn-md text-center">Go To Login</a>
+
 
                         </form>
+                        <a href="Login.jsp"><span><i class="fa-solid fa-circle-arrow-left" id="back"></i></span></a>
                     </div>
 
                 </div>
@@ -233,6 +242,6 @@
     <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="controller/SignUpController.js"></script>
+    <script src="controller/RegistrationController.js"></script>
 </body>
 </html>
