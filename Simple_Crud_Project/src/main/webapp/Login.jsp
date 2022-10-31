@@ -54,8 +54,8 @@
                                 <input type="checkbox">Remember Me
                             </div>
                             <div class="form-group">
-                                <input type="button" value="Login" class="btn float-right login_btn" id="btnLog"  style=" font-size: 30px; font-weight: 600 "
-                                       >
+                                <input type="button" value="Login" class="btn float-right login_btn" id="btnLog"  style="     height: 60px; font-size: 30px; font-weight: 600 " >
+                                      
 
                             </div>
                         </form>
