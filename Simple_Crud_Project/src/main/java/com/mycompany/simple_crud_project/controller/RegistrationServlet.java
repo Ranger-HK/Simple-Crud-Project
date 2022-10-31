@@ -30,22 +30,18 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "RegistrationServlet", urlPatterns = {"/Registration"})
 public class RegistrationServlet extends HttpServlet {
-//    create object in BO layer
 
+//    create object in BO layer
     RegistrationBo registrationBo = new RegistrationBo();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {  //Read
 
         resp.setContentType("application/json");
-        //resp.setCharacterEncoding("UTF-8");
-//        ServletContext servletContext = req.getServletContext();
-//        BasicDataSource basicDataSource = (BasicDataSource) servletContext.getAttribute("bds");
 
         try {
 
             PrintWriter writer = resp.getWriter();
-//            Connection connection = basicDataSource.getConnection();
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
             JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
@@ -65,7 +61,8 @@ public class RegistrationServlet extends HttpServlet {
 
             writer.print(arrayBuilder.build());
             con.close();
-            //System.out.println(details);
+
+            //System.out.println(check);
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -76,8 +73,6 @@ public class RegistrationServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException { //Create
         resp.setContentType("application/json");
-//        ServletContext servletContext = req.getServletContext();
-//        BasicDataSource bds = (BasicDataSource) servletContext.getAttribute("bds");
 
         PrintWriter writer = resp.getWriter();
         JsonReader reader = Json.createReader(req.getReader());
@@ -91,9 +86,6 @@ public class RegistrationServlet extends HttpServlet {
 
         RegistrationDTO registrationDTO = new RegistrationDTO(userID, userName, address, email, contact, password);
         try {
-//            Connection connection = bds.getConnection();
-            //Class.forName("com.mysql.cj.jdbc.Driver");
-            //Connection con = DriverManager.getConnection("jdbc:mysql://Simple_Crud_Project", "root", "19990202Ravi@:&pra");
             if (registrationBo.registrationUser(registrationDTO)) {
                 JsonObjectBuilder response = Json.createObjectBuilder();
                 response.add("status", 200);
@@ -107,7 +99,7 @@ public class RegistrationServlet extends HttpServlet {
                 response.add("data", "");
                 writer.print(response.build());
             }
-            //con.close();
+
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -157,22 +149,21 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException { //Delete
-       resp.setContentType("application/json");
-        
+        resp.setContentType("application/json");
+
         //get userID Using getParameter Method
         String userID = req.getParameter("userID");
         System.out.println(userID);
-        
-        
+
         PrintWriter writer = resp.getWriter();
         try {
-            if (registrationBo.deleteUser(userID)){
+            if (registrationBo.deleteUser(userID)) {
                 JsonObjectBuilder response = Json.createObjectBuilder();
                 response.add("status", 200);
                 response.add("message", "Successfuly deleted...");
                 response.add("data", "");
                 writer.print(response.build());
-            }else{
+            } else {
                 JsonObjectBuilder response = Json.createObjectBuilder();
                 response.add("status", 500);
                 response.add("message", "Wrong ID inserted...");
@@ -184,6 +175,6 @@ public class RegistrationServlet extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
 }

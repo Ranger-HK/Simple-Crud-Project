@@ -28,8 +28,8 @@
                         <h1>Sign In</h1>  
                         <div class="d-flex justify-content-end social_icon">
                             <a href="https://github.com/"> <span><i class="fa-brands fa-square-github"></i></span></a>
-                             <a href="https://www.google.com/"><span><i class="fab fa-google-plus-square"></i></span></a>
-                             <a href="https://github.com/Ranger-HK?tab=repositories"><span><i class="fab fa-twitter-square"></i></span></a>
+                            <a href="https://www.google.com/"><span><i class="fab fa-google-plus-square"></i></span></a>
+                            <a href="https://github.com/Ranger-HK?tab=repositories"><span><i class="fab fa-twitter-square"></i></span></a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -37,7 +37,7 @@
                         <form>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-user"  style=" font-size: 28px;"></i></span>
                                 </div>
                                 <input type="text" class="form-control" placeholder="username" id="userID">
 
@@ -45,7 +45,7 @@
 
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-key" style=" font-size: 28px;" ></i></span>
                                 </div>
                                 <input type="password" class="form-control" placeholder="password" id="password">
                             </div>
@@ -54,7 +54,8 @@
                                 <input type="checkbox">Remember Me
                             </div>
                             <div class="form-group">
-                               <input type="button" value="Login" class="btn float-right login_btn" id="btnLog">
+                                <input type="button" value="Login" class="btn float-right login_btn" id="btnLog"  style=" font-size: 30px; font-weight: 600 "
+                                       >
 
                             </div>
                         </form>

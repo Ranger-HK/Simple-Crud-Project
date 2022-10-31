@@ -148,14 +148,14 @@ input:focus{
     color: black;
     background-color: #FFC312;
     width: 150px;
-    height: 50px;
+    height: 180px;
     position: relative;
     top: 90px;
     right: 180px;
 }
 
 .login_btn:hover{
-    color: black;
+    color: yellow;
     background-color: white;
 }
 
@@ -184,7 +184,5 @@ input:focus{
     left: 200px;
     bottom:30px;
 }
-
-
 
 

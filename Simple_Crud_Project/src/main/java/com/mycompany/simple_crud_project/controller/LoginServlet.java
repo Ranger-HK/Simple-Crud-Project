@@ -27,40 +27,40 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Ravindu
  */
-@WebServlet(urlPatterns ="/Login")
+@WebServlet(urlPatterns = "/Login")
 public class LoginServlet extends HttpServlet {
-    
+
     LoginBo loginBo = new LoginBo();
-    
-     @Override
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
-            
+
             JsonReader reader = Json.createReader(req.getReader());
             JsonObject obj = reader.readObject();
             PrintWriter writer = resp.getWriter();
-            
+
             String userID = obj.getString("userID");
             String password = obj.getString("password");
-            
+
             boolean equal = loginBo.equalityUser(userID, password);
-            if (equal){
+            if (equal) {
                 JsonObjectBuilder response = Json.createObjectBuilder();
                 response.add("status", 200);
                 response.add("message", true);
                 response.add("data", JsonValue.NULL);
                 writer.print(response.build());
-            }else{
+            } else {
                 JsonObjectBuilder response = Json.createObjectBuilder();
                 response.add("status", 400);
                 response.add("message", false);
                 response.add("data", JsonValue.NULL);
                 writer.print(response.build());
             }
-                    
+
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

@@ -15,19 +15,20 @@ import java.util.ArrayList;
  * @author Ravindu
  */
 public class RegistrationBo {
-       RegistrationDao registrationDao = new RegistrationDao();
 
-    public boolean registrationUser(RegistrationDTO registrationDTO) throws ClassNotFoundException{
+    RegistrationDao registrationDao = new RegistrationDao();
+
+    public boolean registrationUser(RegistrationDTO registrationDTO) throws ClassNotFoundException {
         return registrationDao.registerUser(new Registration(
                 registrationDTO.getUserID(),
-                registrationDTO.getUserName(), 
+                registrationDTO.getUserName(),
                 registrationDTO.getAddress(),
                 registrationDTO.getEmail(),
                 registrationDTO.getContact(),
                 registrationDTO.getPassword()
         ));
     }
-    
+
     public ArrayList<RegistrationDTO> getAllUser() throws SQLException, ClassNotFoundException {
         ArrayList<Registration> all = registrationDao.getAllUser();
         ArrayList<RegistrationDTO> registrationList = new ArrayList<>();
@@ -46,8 +47,8 @@ public class RegistrationBo {
         return registrationList;
 
     }
-    
-      public boolean updateUser(RegistrationDTO registrationDTO) throws ClassNotFoundException, SQLException{
+
+    public boolean updateUser(RegistrationDTO registrationDTO) throws ClassNotFoundException, SQLException {
         return registrationDao.updateUser(new Registration(
                 registrationDTO.getUserID(),
                 registrationDTO.getUserName(),
@@ -57,24 +58,9 @@ public class RegistrationBo {
                 registrationDTO.getPassword()
         ));
     }
-      
-        public boolean deleteUser(String userID) throws ClassNotFoundException, SQLException{
+
+    public boolean deleteUser(String userID) throws ClassNotFoundException, SQLException {
         return registrationDao.deleteUser(userID);
     }
-    
-//    public RegistrationDTO searchUser(String userID) throws ClassNotFoundException, SQLException{
-//        Registration searchUser = registrationDao.searchUser(userID);
-//        if (searchUser==null){
-//            return null;
-//        }else{
-//            return new RegistrationDTO(
-//                    searchUser.getUserID(),
-//                    searchUser.getUserName(),
-//                    searchUser.getAddress(),
-//                    searchUser.getEmail(),
-//                    searchUser.getContact(),
-//                    searchUser.getPassword()
-//            );
-//        }
-//    }
+
 }

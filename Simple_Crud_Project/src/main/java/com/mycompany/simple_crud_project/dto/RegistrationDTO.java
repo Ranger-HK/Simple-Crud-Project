@@ -9,7 +9,8 @@ package com.mycompany.simple_crud_project.dto;
  * @author Ravindu
  */
 public class RegistrationDTO {
-     private String userID;
+
+    private String userID;
     private String userName;
     private String address;
     private String email;

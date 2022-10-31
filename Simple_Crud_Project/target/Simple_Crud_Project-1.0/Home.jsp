@@ -81,7 +81,75 @@
                 font-family: 'Lato', sans-serif;
                 font-size: 45px;
                 font-weight: 800;
-                
+
+            }
+
+            section{
+                top: -100px;
+                position: relative;
+
+            }
+
+            .container{
+                height: 100%;
+                align-content: center;
+            }
+
+            .user-card{
+                height: 515px;
+                margin-top: 80px;
+                margin-bottom: auto;
+                width: 900px;
+                background-color: rgba(0,0,0,0.8) !important;
+
+            }
+
+            .card-body{
+                position: relative;
+                top: 20px;
+                width: 800px;
+                left: 40px;
+
+
+
+            }
+
+            .input-group span{
+                width:50px;
+                background-color: #f1c40f;
+                color: black;
+                border:0 !important;
+            }
+
+            .fa-user::before {
+                font-size: 22px;
+                left: 0px;
+                top: 0px;
+                position: relative;
+            }
+            .fa-solid{
+                font-size: 22px;
+                position: relative;
+            }
+            .fa-regular{
+                font-size: 22px;
+                position: relative;
+            }
+            .fa-envelope{
+                font-size: 22px;
+                position: relative;
+            }
+            .fa-users{
+                font-size: 20px;
+                position: relative;
+            }
+            .fa-lock{
+                font-size: 20px;
+                position: relative;
+            }
+            input:focus{
+                outline: 0 0 0 0  !important;
+                box-shadow: 0 0 0 0 !important;
             }
 
 
@@ -92,21 +160,108 @@
 
     <body>
 
-        <!--        <div class="row align-items-end">-->
+
+
         <div class="col-5">
             <a href="Login.jsp"><span><i class="fa-solid fa-circle-arrow-left" id="back"></i></span></a>
-            <button type="button" class="btn btn-danger btn-sm">Delete</button>
-            <button type="button" class="btn btn-secondary btn-sm">Update</button>
+            <button type="button" class="btn btn-danger btn-sm" id="btnDelete">Delete</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="btnUpdate">Update</button>
             <h1>Users Details</h1>
         </div>
 
 
+        <section>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="user-card">
+                        <div class="card-header">
 
 
-        <!--        <div class="row align-items-center">-->
+
+                        </div>
+                        <div class="card-body">
+
+
+                            <form class="form-horizontal" method="post" action="#" id="user">
+
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">User Id</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa-solid fa-image-portrait"></i></span>
+                                            <input type="text" class="form-control" name="userID" id="txtUserId" placeholder="Enter Your Id" />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Name</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="userName" id="txtUserName" placeholder="Enter Your Name" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Address</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa-regular fa-address-card"></i></span>
+                                            <input type="text" class="form-control" name="userAddress" id="txtUserAddress" placeholder="Enter Your Address" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Email</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="email" id="txtEmail" placeholder="Enter Your Email" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="username" class="cols-sm-2 control-label">Contact</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="contact" id="txtContact" placeholder="Enter Your Contact" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="password" class="cols-sm-2 control-label">Password</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                            <input type="password" class="form-control" name="password" id="txtPassword" placeholder="Enter your Password" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
         <div class="col-12 mt-2">
-
-            <table class="table table-success table-striped">
+            <table id="table" class="table table-success table-striped">
 
                 <thead class="table-dark">
                     <tr>
@@ -119,16 +274,7 @@
                     </tr>
                 </thead>
                 <tbody id="userTable">
-                    <tr>
-                        <th>U001</th>
-                        <th>Ravindu</th>
-                        <th>Bandaragama</th>
-                        <th>Ravindu@gmail.com</th>
-                        <th>+94 764618605</th>
-                        <th>R1999</th>
 
-
-                    </tr>
 
                 </tbody>
             </table>
@@ -139,6 +285,9 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="controller/UserController.js"></script>    
+        <script src="controller/TableClick.js"></script>  
+
+
 
 
     </body>

@@ -23,63 +23,68 @@ function loadAllUsers() {
     });
 }
 
-$("#userTable > tr").click(function() {
-        /*console.log("row clicked");
-        console.log(this);*/
-        //console.log($(this));
-        var userID = $(this).children(":eq(0)").text();
-        var userName = $(this).children(":eq(1)").text();
-        var address = $(this).children(":eq(2)").text();
-        var email = $(this).children(":eq(3)").text();
-        var contact = $(this).children(":eq(4)").text();
-        var password = $(this).children(":eq(5)").text();
 
-        //console.log(userID, userName, address, email);
-
-        /*set user details for the textFields*/
-        $("#txtUserID").val(userID);
-        $("#txtUserName").val(userName);
-        $("#txtAddress").val(address);
-        $("#txtEmail").val(email);
-        $("#txtContact").val(contact);
-        $("#txtPassword").val(password);
+$("#btnUpdate").click(function () {
+    updateUser();
+    console.log("Giya");
 });
 
 function updateUser() {
 
-        /*create json ob*/
-        var userOb={
-            userID:$("#txtUserID").val(),
-            userName:$("#txtUserName").val(),
-            address:$("#txtAddress").val(),
-            email:$("#txtEmail").val(),
-            contact:$("#txtContact").val(),
-            password:$("#txtPassword").val()
-        };
+    /*create json ob*/
+    var userOb = {
+        userID: $("#txtUserId").val(),
+        userName: $("#txtUserName").val(),
+        address: $("#txtUserAddress").val(),
+        email: $("#txtEmail").val(),
+        contact: $("#txtContact").val(),
+        password: $("#txtPassword").val()
+    };
+    console.log(userOb);
 
-       /*let serialize = $("#userForm").serialize();*/
-       /*implement ajax request for updateUser Function*/
-        $.ajax({
-          url:"http://localhost:8080/Simple_Crud_Project/Registration",
-          method:"PUT",
-          contentType:"application/json", //request content type json
-          data:JSON.stringify(userOb) , //convert valid json String
-          success:function (res){
-              /*console.log(res);*/
-              if (res.status==200){
-                  alert(res.message);
-                  loadAllUsers();
-              }else if (res.status==400){
-                  alert(res.message);
 
-              }else {
-                  alert(res.data);
-              }
-              /*alert(res);
-              loadAllUsers();*/
-          },
-          error:function (ob, error) {
-              console.log(ob);
-          }
-       });
-    }
+    /*implement ajax request for updateUser Function*/
+    $.ajax({
+        url: "http://localhost:8080/Simple_Crud_Project/Registration",
+        method: "PUT",
+        contentType: "application/json", //request content type json
+        data: JSON.stringify(userOb), //convert valid json String
+        success: function (res) {
+            /*console.log(res);*/
+            if (res.status == 200) {
+                alert(res.message);
+                loadAllUsers();
+            } else if (res.status == 400) {
+                alert(res.message);
+
+            } else {
+                alert(res.data);
+            }
+
+        },
+        error: function (ob, error) {
+            console.log(ob);
+        }
+    });
+}
+
+
+
+
+$("#btnDelete").click(function () {
+    // console.log("Awa data");
+    let userID = $("#txtUserId").val();
+
+    $.ajax({
+        url: "http://localhost:8080/Simple_Crud_Project/Registration?userID=" + userID,
+        method: "DELETE",
+        success: function (resp) {
+            if (resp.status == 200) {
+                alert("Successfully deleted the User");
+                loadAllUsers();
+            } else {
+                alert("Can't delete the User");
+            }
+        }
+    });
+});
