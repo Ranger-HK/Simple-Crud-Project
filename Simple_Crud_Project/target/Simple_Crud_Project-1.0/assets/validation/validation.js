@@ -9,8 +9,8 @@ function validation() {
     const userIdRegex = /^(U)[0-9]{1,3}$/;
     const userNameRegex = /^[A-z ]{5,20}$/;
     const userAddress = /^[A-z ]{5,20}$/;
-    const emailRegex = /^[A-z ]{5,30}$/;
-    const telephoneNumberRegex = /^[A-z ]{5,20}$/;
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const telephoneNumberRegex = /^[0-9]{10}$/;
     const passwordRegex = /^[A-z ]{5,20}$/;
 
     $("#txtuserID").keydown(function (e) {
