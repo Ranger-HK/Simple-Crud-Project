@@ -16,9 +16,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Work+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
     </head>
+
     <body>
 
 
+    
         <img alt="wallpaper" src="assets/img/navy-blue-smoky-art-abstract-background.jpg" class="banner">
 
 

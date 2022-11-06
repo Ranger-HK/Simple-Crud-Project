@@ -27,6 +27,7 @@ function registrationUser() {
     };
 
 
+
     /*----------------------ajax for saveCustomer function---------------------------*/
     $.ajax({
         url: "http://localhost:8080/Simple_Crud_Project/Registration",

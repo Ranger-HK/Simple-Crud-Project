@@ -36,6 +36,8 @@ public class LoginDao {
     }
     
     
+    
+    
  /*   public Registration getuser (String userID) throws SQLException, ClassNotFoundException{
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");

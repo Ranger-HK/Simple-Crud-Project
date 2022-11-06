@@ -11,7 +11,7 @@ function validation() {
     const userAddress = /^[A-z ]{5,20}$/;
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const telephoneNumberRegex = /^[0-9]{10}$/;
-    const passwordRegex = /^[A-z ]{5,20}$/;
+    const passwordRegex = /^[A-z ]{5,20}$/; //var regex = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]{8,}$/;
 
     $("#txtuserID").keydown(function (e) {
         if (e.key === "Enter") {

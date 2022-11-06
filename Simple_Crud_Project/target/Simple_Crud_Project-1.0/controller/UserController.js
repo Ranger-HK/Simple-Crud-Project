@@ -71,6 +71,8 @@ function updateUser() {
 
 
 
+
+
 $("#btnDelete").click(function () {
     // console.log("Awa data");
     let userID = $("#txtUserId").val();

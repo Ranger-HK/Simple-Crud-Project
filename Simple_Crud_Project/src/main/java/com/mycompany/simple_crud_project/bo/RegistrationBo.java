@@ -14,6 +14,8 @@ import java.util.ArrayList;
  *
  * @author Ravindu
  */
+
+
 public class RegistrationBo {
 
     RegistrationDao registrationDao = new RegistrationDao();

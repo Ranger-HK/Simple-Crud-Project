@@ -37,6 +37,8 @@ $("#btnLog").click(function () {
 
 
 
+
+
 //
 //
 ///* global CryptoJS */
