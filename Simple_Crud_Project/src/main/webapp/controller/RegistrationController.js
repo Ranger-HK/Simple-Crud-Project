@@ -46,3 +46,64 @@ function registrationUser() {
         }
     });
 }
+
+
+
+
+
+
+
+
+
+//
+//
+/////* global CryptoJS */
+//$("#btnSave").click(function () {
+//    //console.log("Hello"); 
+//    registrationUser();
+//});
+//
+//function registrationUser() {
+//    let userID = $("#txtuserID").val();
+//    let userName = $("#txtuserName").val();
+//    let address = $("#txtaddress").val();
+//    let email = $("#txtemail").val();
+//    let contact = $("#txtcontact").val();
+//    let password = $("#txtpassword").val();
+//
+//   
+//    var cipher = CryptoJS.AES.encrypt(password, "CIPHERKEY").toString();
+//    
+//    var user = {
+//        userID: userID,
+//        userName: userName,
+//        address: address,
+//        email: email,
+//        contact: contact,
+//        password: cipher
+//    };
+//
+// console.log(user.password);
+//    /*----------------------ajax for saveCustomer function---------------------------*/
+//    $.ajax({
+//        url: "http://localhost:8080/Simple_Crud_Project/Registration",
+//        method: "POST",
+//        data: JSON.stringify(user),
+//        success: function (res) {
+//            if (res.status == 200) {
+//                alert(res.message);
+//
+//            } else {
+//                alert(res.data);
+//            }
+//
+//        },
+//        error: function (ob, textStatus, error) {
+//            alert(textStatus);
+//        }
+//    });
+//}
+
+
+
+

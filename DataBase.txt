@@ -20,3 +20,35 @@ INSERT INTO Registration VALUES
 ('U001','Ravindu','Bandaragama','ravindu9@gmail.com','+94764618605','1999');
 
 select * from registration;
+
+
+
+
+CREATE DATABASE IF NOT EXISTS `Simple_Crud_Project`;
+SHOW DATABASES;
+USE `Simple_Crud_Project`;
+
+CREATE TABLE IF NOT EXISTS Registration(
+	userID VARCHAR(10),
+	userName VARCHAR(45) NOT NULL DEFAULT 'Unknown',
+	address VARCHAR(25) NOT NULL,
+	email VARCHAR(28),
+	contact VARCHAR(24),
+	password VARCHAR(15) NOT NULL,
+	createTime varchar (100),
+	createUser varchar (20),
+	lastUpdateTime varchar (20),
+	lastUpdateUser varchar (20),
+	CONSTRAINT PRIMARY KEY (userID)
+		
+); 
+
+SHOW TABLES;
+DESC Registration;
+
+INSERT INTO Registration VALUES
+('U001','Ravindu','Bandaragama','ravindu9@gmail.com','+94764618605','1999');
+
+drop table Registration;
+
+select * from registration;
