@@ -16,13 +16,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Roboto:wght@300&family=Work+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+        <!--                <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">-->
+        <!--        <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">-->
+
 
         <style>
 
 
             html,body{
                 background-image: url('assets/img/pexels-henry-&-co-2341290.jpg');
-                background-size: cover;
+/*                background-size: cover;*/
                 background-repeat: no-repeat;
                 height: 100%;
                 font-family: 'Roboto', sans-serif;
@@ -152,6 +155,13 @@
                 box-shadow: 0 0 0 0 !important;
             }
 
+            .tblSection{
+                position: relative;
+                top: 10px;
+                width: 1800px;
+                left: 45px;
+            }
+
 
 
 
@@ -259,33 +269,45 @@
             </div>
         </section>
 
+        <section class="tblSection">
+            <div class="col-12 mt-2">
+                <table id="table" class="table table-success table-striped table-bordered table-hover ">
 
-        <div class="col-12 mt-2">
-            <table id="table" class="table table-success table-striped">
-
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col">User Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Contact</th>
-                        <th scope="col">Password</th>
-                    </tr>
-                </thead>
-                <tbody id="userTable">
-
-
-                </tbody>
-            </table>
-        </div>
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">User Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Password</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable">
 
 
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </section>
         <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--        <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>-->
+
         <script src="controller/UserController.js"></script>    
-        <script src="controller/TableClick.js"></script>  
+        <script src="controller/TableClick.js"></script> 
+        <!--                    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                            <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+                            <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+                            <script>
+                                $(document).ready(function () {
+                                    $('#table').DataTable();
+                                });
+                            </script>-->
 
 
 
