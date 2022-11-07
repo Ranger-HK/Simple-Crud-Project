@@ -164,6 +164,13 @@
             }
 
 
+            #table_filter{
+                top: -30px;
+                position: relative;
+                left: 697px;
+                width: 200px;
+            }
+
 
 
         </style>
