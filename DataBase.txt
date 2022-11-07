@@ -7,10 +7,13 @@ CREATE TABLE IF NOT EXISTS Registration(
 	userID VARCHAR(10),
 	userName VARCHAR(45) NOT NULL DEFAULT 'Unknown',
 	address VARCHAR(25) NOT NULL,
-	email VARCHAR(18),
+	email VARCHAR(28),
 	contact VARCHAR(24),
 	password BLOB NOT NULL,
-	CONSTRAINT PRIMARY KEY (userID)	
+	CONSTRAINT PRIMARY KEY (userID),
+	CONSTRAINT UNIQUE KEY (userName),
+	CONSTRAINT UNIQUE KEY (email),
+	CONSTRAINT UNIQUE KEY (contact)		
 ); 
 
 SHOW TABLES;
@@ -24,3 +27,9 @@ select * from registration;
 
 drop table Registration;
 
+
+
+	CONSTRAINT PRIMARY KEY (userID),
+	CONSTRAINT UNIQUE KEY (userName),
+	CONSTRAINT UNIQUE KEY (email),
+	CONSTRAINT UNIQUE KEY (contact)	

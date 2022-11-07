@@ -11,7 +11,7 @@ function validation() {
     const userAddress = /^[A-z ]{5,20}$/;
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const telephoneNumberRegex = /^[0-9]{10}$/;
-    const passwordRegex = /^[A-z ]{5,20}$/; //var regex = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]{8,}$/;
+    const passwordRegex = /^[A-z]{5,20}$/; //var regex = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]{8,}$/;
 
     $("#txtuserID").keydown(function (e) {
         if (e.key === "Enter") {
@@ -67,7 +67,7 @@ function validation() {
                                                                             $("#txtpassword").css('color', '#04db14');
                                                                             $('#btnSave').prop('disabled', false);
                                                                             //$('#btnUpdateCustomer').prop('disabled', false);
-                                                                        }else {
+                                                                        } else {
                                                                             $("#password").css('border-color', '#ff0202');
                                                                             $("#password").css('box-shadow', '0 0 0 0.25rem rgb(13 110 253 / 25%)');
                                                                             $("#password").css('color', '#ff0202');
@@ -77,7 +77,7 @@ function validation() {
                                                                     }
                                                                 });
 
-                                                            }else {
+                                                            } else {
                                                                 $("#txtcontact").css('border-color', '#ff0202');
                                                                 $("#txtcontact").css('box-shadow', '0 0 0 0.25rem rgb(13 110 253 / 25%)');
                                                                 $("#txtcontact").css('color', '#ff0202');
@@ -87,7 +87,7 @@ function validation() {
                                                         }
                                                     });
 
-                                                }else {
+                                                } else {
                                                     $("#txtemail").css('border-color', '#ff0202');
                                                     $("#txtemail").css('box-shadow', '0 0 0 0.25rem rgb(13 110 253 / 25%)');
                                                     $("#txtemail").css('color', '#ff0202');
@@ -97,7 +97,7 @@ function validation() {
                                             }
                                         });
 
-                                    }else {
+                                    } else {
                                         $("#txtaddress").css('border-color', '#ff0202');
                                         $("#txtaddress").css('box-shadow', '0 0 0 0.25rem rgb(13 110 253 / 25%)');
                                         $("#txtaddress").css('color', '#ff0202');

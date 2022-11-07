@@ -20,13 +20,13 @@
         <!--        <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">-->
 
 
-        
+
         <style>
 
 
             html,body{
                 background-image: url('assets/img/pexels-henry-&-co-2341290.jpg');
-/*                background-size: cover;*/
+                /*                background-size: cover;*/
                 background-repeat: no-repeat;
                 height: 100%;
                 font-family: 'Roboto', sans-serif;
@@ -298,17 +298,16 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!--        <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>-->
-
         <script src="controller/UserController.js"></script>    
         <script src="controller/TableClick.js"></script> 
-        <!--                    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-                            <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-                            <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-                            <script>
-                                $(document).ready(function () {
-                                    $('#table').DataTable();
-                                });
-                            </script>-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#table').DataTable();
+            });
+        </script>
 
 
 

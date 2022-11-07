@@ -17,6 +17,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!--        <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">-->
+
 
 
     </head>
@@ -54,7 +56,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="button" value="Login" class="btn float-right login_btn" id="btnLog"  style="     height: 60px; font-size: 30px; font-weight: 600 " >
-                                      
+
 
                             </div>
                         </form>
@@ -80,10 +82,11 @@
 
 
         </div>  
-<!--          <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>-->
+        <!--          <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>-->
         <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--        <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>-->
         <script src="controller/LoginController.js"></script>
 
     </body>
