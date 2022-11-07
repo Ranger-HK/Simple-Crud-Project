@@ -7,6 +7,8 @@
 $("#btnSave").click(function () {
     //console.log("Hello"); 
     registrationUser();
+
+
 });
 
 function registrationUser() {
@@ -37,11 +39,13 @@ function registrationUser() {
             if (res.status == 200) {
                 swal("Operation success!", "You clicked the button!", "success");
 
+
 //                alert(res.message);
 //                swal("Operation success!", "You clicked the button!", "success");
 
             } else {
                 swal("Operation failed!", "You clicked the button!", "error");
+
 
 //                alert(res.data);
 //                swal("Operation failed!", "You clicked the button!", "error");
@@ -54,8 +58,6 @@ function registrationUser() {
         }
     });
 }
-
-
 
 
 

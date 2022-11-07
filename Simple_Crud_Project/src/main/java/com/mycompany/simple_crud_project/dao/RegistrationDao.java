@@ -26,7 +26,7 @@ public class RegistrationDao {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
 
-            PreparedStatement pstm = con.prepareStatement("insert into Registration values(?,?,?,?,?,?)");
+            PreparedStatement pstm = con.prepareStatement("insert into Registration values(?,?,?,?,?,md5(?))");
             pstm.setObject(1, registration.getUserID());
             pstm.setObject(2, registration.getUserName());
             pstm.setObject(3, registration.getAddress());
@@ -70,7 +70,7 @@ public class RegistrationDao {
     public boolean updateUser(Registration registration) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
-        PreparedStatement pstm = con.prepareStatement("update Registration set userName=?, address=?, email=?, contact=?, password=? where userID=?");
+        PreparedStatement pstm = con.prepareStatement("update Registration set userName=?, address=?, email=?, contact=?, password=md5(?) where userID=?");
         pstm.setObject(1, registration.getUserName());
         pstm.setObject(2, registration.getAddress());
         pstm.setObject(3, registration.getEmail());
@@ -99,9 +99,3 @@ public class RegistrationDao {
     }
 
 }
-
-
-
-
-
-

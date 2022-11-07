@@ -13,6 +13,7 @@ import java.sql.SQLException;
  */
 public class LoginBo {
 
+   
     LoginDao loginDao = new LoginDao();
 
     public boolean equalityUser(String userID, String password) throws ClassNotFoundException, SQLException {

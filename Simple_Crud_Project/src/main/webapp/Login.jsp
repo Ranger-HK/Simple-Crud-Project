@@ -40,7 +40,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"  style=" font-size: 28px;"></i></span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="username" id="userID">
+                                 <input type="text" class="form-control" placeholder="username" id="userID">
 
                             </div>
 
