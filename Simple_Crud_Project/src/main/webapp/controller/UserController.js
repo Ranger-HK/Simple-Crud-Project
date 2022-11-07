@@ -52,10 +52,15 @@ function updateUser() {
         success: function (res) {
             /*console.log(res);*/
             if (res.status == 200) {
-                alert(res.message);
+                swal("Good job!", "Successfully update the user!", "success");
+//                alert(res.message);
                 loadAllUsers();
+                clearAll();
+
             } else if (res.status == 400) {
-                alert(res.message);
+                swal("Error request!", "Fail to update the user!", "error");
+
+//                alert(res.message);
 
             } else {
                 alert(res.data);
@@ -82,24 +87,31 @@ $("#btnDelete").click(function () {
         method: "DELETE",
         success: function (resp) {
             if (resp.status == 200) {
-                alert("Successfully deleted the User");
+                swal("Good job!", "Successfully delete the user!", "success");
+//                alert("Successfully deleted the User");
 //                swal("Good job!", "Successfully deleted the customer!", "success");
                 loadAllUsers();
-//                clearAll();
+                clearAll();
             } else {
+                swal("Error request!", "Fail to delete the user!", "error");
+
 //                swal("Error request!", "Fail to delete the customer!", "error");
-                alert("Can't delete the User");
+//                alert("Can't delete the User");
             }
         }
     });
 });
 
-//
-//function clearAll() {
-//    $("#txtUserId").val("");
-//    $("#txtUserName").val("");
-//    $("#txtUserAddress").val("");
-//    $("#txtEmail").val("");
-//    $("#txtContact").val("");
-//    $("#txtPassword").val("");
-//}
+
+
+function clearAll() {
+    console.log("Clear");
+    $("#txtUserId").val("");
+    $("#txtUserName").val("");
+    $("#txtUserAddress").val("");
+    $("#txtEmail").val("");
+    $("#txtContact").val("");
+    $("#txtPassword").val("");
+
+}
+
