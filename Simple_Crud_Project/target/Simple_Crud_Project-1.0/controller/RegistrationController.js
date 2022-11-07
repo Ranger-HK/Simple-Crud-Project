@@ -7,6 +7,7 @@
 $("#btnSave").click(function () {
     //console.log("Hello"); 
     registrationUser();
+//    clearRegister();
 
 
 });
@@ -38,6 +39,12 @@ function registrationUser() {
         success: function (res) {
             if (res.status == 200) {
                 swal("Operation success!", "You clicked the button!", "success");
+                $("#txtuserID").val("");
+                $("#txtuserName").val("");
+                $("#txtaddress").val("");
+                $("#txtemail").val("");
+                $("#txtcontact").val("");
+                $("#txtpassword").val("");
 
 
 //                alert(res.message);
@@ -59,6 +66,18 @@ function registrationUser() {
     });
 }
 
+//
+//
+//function clearRegister() {
+//    console.log("clearhari");
+//    $("#txtuserID").val("");
+//    $("#txtuserName").val("");
+//    $("#txtaddress").val("");
+//    $("#txtemail").val("");
+//    $("#txtcontact").val("");
+//    $("#txtpassword").val("");
+//
+//}
 
 
 
