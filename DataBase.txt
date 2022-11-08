@@ -33,3 +33,8 @@ drop table Registration;
 	CONSTRAINT UNIQUE KEY (userName),
 	CONSTRAINT UNIQUE KEY (email),
 	CONSTRAINT UNIQUE KEY (contact)	
+
+
+
+
+bcfd3203056c535aace7c6c4b810d83b

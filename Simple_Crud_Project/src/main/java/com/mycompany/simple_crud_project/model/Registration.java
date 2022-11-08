@@ -16,6 +16,8 @@ public class Registration {
     private String email;
     private String contact;
     private String password;
+    private String createTime;
+    private String lastUpdateTime;
 
     @Override
     public String toString() {
@@ -70,6 +72,22 @@ public class Registration {
         this.password = password;
     }
 
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getLastUpdateTime() {
+        return lastUpdateTime;
+    }
+
+    public void setLastUpdateTime(String lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+    }
+
     public Registration(String userID, String userName, String address, String email, String contact, String password) {
         this.userID = userID;
         this.userName = userName;
@@ -77,11 +95,20 @@ public class Registration {
         this.email = email;
         this.contact = contact;
         this.password = password;
+
+    }
+
+    public Registration(String userID, String userName, String address, String email, String contact, String password, String createTime, String lastUpdateTime) {
+        this.userID = userID;
+        this.userName = userName;
+        this.address = address;
+        this.email = email;
+        this.contact = contact;
+        this.password = password;
+        this.createTime = createTime;
+        this.lastUpdateTime = lastUpdateTime;
     }
 
     public Registration() {
     }
 }
-
-
-

@@ -21,18 +21,18 @@ $("#btnLog").click(function () {
         method: 'POST',
 
         data: JSON.stringify(obj),
-        //dataType: json,
+//        dataType: json,
         success: function (res) {
             console.log(res);
             if (res.status == 200) {
-//                swal("Operation success!", "You clicked the button!", "success");
+                swal("Operation success!", "You clicked the button!", "success");
 
-                alert("Success");
+//                alert("Success");
                 window.location = "Home.jsp";
             } else {
-//                swal("Operation failed!", "You clicked the button!", "error");
+                swal("Operation failed!", "You clicked the button!", "error");
 
-                alert("User name or password incorrect");
+//                alert("User name or password incorrect");
             }
         }
     });
