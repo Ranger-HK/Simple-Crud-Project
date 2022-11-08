@@ -25,12 +25,12 @@ $("#btnLog").click(function () {
         success: function (res) {
             console.log(res);
             if (res.status == 200) {
-                swal("Operation success!", "You clicked the button!", "success");
+                swal("Login success!", "You clicked the button!", "success");
 
 //                alert("Success");
                 window.location = "Home.jsp";
             } else {
-                swal("Operation failed!", "You clicked the button!", "error");
+                swal("User name or password incorrect!", "You clicked the button!", "error");
 
 //                alert("User name or password incorrect");
             }
