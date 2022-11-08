@@ -52,15 +52,13 @@ function updateUser() {
         success: function (res) {
             /*console.log(res);*/
             if (res.status == 200) {
-                swal("Good job!", "Successfully update the user!", "success");
-//                alert(res.message);
+                swal("Update Completed !", "Successfully Update the User!", "success");
                 loadAllUsers();
                 clearAll();
 
             } else if (res.status == 400) {
-                swal("Error request!", "Fail to update the user!", "error");
+                swal("Error Updated Unsuccessful!", "Fail to update the user!", "error");
 
-//                alert(res.message);
 
             } else {
                 alert(res.data);
@@ -87,16 +85,12 @@ $("#btnDelete").click(function () {
         method: "DELETE",
         success: function (resp) {
             if (resp.status == 200) {
-                swal("Good job!", "Successfully delete the user!", "success");
-//                alert("Successfully deleted the User");
-//                swal("Good job!", "Successfully deleted the customer!", "success");
+                swal("Delete Completed!", "Successfully delete the user!", "success");
                 loadAllUsers();
                 clearAll();
             } else {
-                swal("Error request!", "Fail to delete the user!", "error");
+                swal("Error Deleted Unsuccessful!", "Fail to delete the user!", "error");
 
-//                swal("Error request!", "Fail to delete the customer!", "error");
-//                alert("Can't delete the User");
             }
         }
     });

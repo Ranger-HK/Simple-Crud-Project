@@ -5,14 +5,12 @@
 package com.mycompany.simple_crud_project.controller;
 
 import com.mycompany.simple_crud_project.bo.LoginBo;
-//import com.mycompany.simple_crud_project.dao.LoginDao;
-//import com.mycompany.simple_crud_project.model.Registration;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-//import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.json.Json;
@@ -32,7 +30,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns = "/Login")
 public class LoginServlet extends HttpServlet {
-    
+
     LoginBo loginBo = new LoginBo();
 
     @Override
@@ -70,67 +68,5 @@ public class LoginServlet extends HttpServlet {
             Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    
-    
-    
-/*
-//    LoginBo loginBo = new LoginBo();
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("application/json");
-        LoginDao user = new LoginDao();
-
-        try {
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
-
-//            JsonReader reader = Json.createReader(req.getReader());
-//            JsonObject obj = reader.readObject();
-            PrintWriter writer = resp.getWriter();
-
-//            String userID = obj.getString("userID");
-//            String password = obj.getString("password");
-
-                String userID  = req.getParameter("userID");
-
-//            boolean equal = loginBo.equalityUser(userID, password);
-            Registration user1 = user.getuser(userID);
-
-            JsonObjectBuilder tempBuilder = Json.createObjectBuilder();
-            tempBuilder.add("userID", user1.getUserID());
-            tempBuilder.add("userName", user1.getUserName());
-            tempBuilder.add("address", user1.getAddress());
-            tempBuilder.add("email", user1.getEmail());
-            tempBuilder.add("contact", user1.getContact());
-            tempBuilder.add("password", user1.getPassword());
-
-            
-//            if (equal) {
-            JsonObjectBuilder response = Json.createObjectBuilder();
-            response.add("status", 200);
-            response.add("message", true);
-            response.add("data",tempBuilder.build());
-            writer.print(response.build());
-            
-//            } else {
-//                JsonObjectBuilder response = Json.createObjectBuilder();
-//                response.add("status", 400);
-//                response.add("message", false);
-//                response.add("data", JsonValue.NULL);
-//                writer.print(response.build());
-//            }
-
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-*/
-    
-    
 }
-
-

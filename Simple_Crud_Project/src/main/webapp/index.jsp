@@ -20,7 +20,7 @@
     <body>
 
 
-    
+
         <img alt="wallpaper" src="assets/img/navy-blue-smoky-art-abstract-background.jpg" class="banner">
 
 

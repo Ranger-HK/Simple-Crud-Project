@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS Registration(
 	email VARCHAR(28),
 	contact VARCHAR(24),
 	password BLOB NOT NULL,
+	createTime VARCHAR(50),
+	lastUpdateTime VARCHAR(50),
 	CONSTRAINT PRIMARY KEY (userID),
 	CONSTRAINT UNIQUE KEY (userName),
 	CONSTRAINT UNIQUE KEY (email),
@@ -27,14 +29,3 @@ select * from registration;
 
 drop table Registration;
 
-
-
-	CONSTRAINT PRIMARY KEY (userID),
-	CONSTRAINT UNIQUE KEY (userName),
-	CONSTRAINT UNIQUE KEY (email),
-	CONSTRAINT UNIQUE KEY (contact)	
-
-
-
-
-bcfd3203056c535aace7c6c4b810d83b

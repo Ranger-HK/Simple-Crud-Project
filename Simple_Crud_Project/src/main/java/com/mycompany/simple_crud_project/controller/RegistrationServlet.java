@@ -27,11 +27,11 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author Ravindu
- * 
+ *
  */
 @WebServlet(name = "RegistrationServlet", urlPatterns = {"/Registration"})
 public class RegistrationServlet extends HttpServlet {
-    
+
     //    create object in BO layer
     RegistrationBo registrationBo = new RegistrationBo();
 
@@ -63,55 +63,12 @@ public class RegistrationServlet extends HttpServlet {
             writer.print(arrayBuilder.build());
             con.close();
 
-            //System.out.println(check);
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-//        PrintWriter writer = resp.getWriter();
-//        writer.write("Hi");
+
     }
 
-
-    /*
-//    create object in BO layer
-    RegistrationBo registrationBo = new RegistrationBo();
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {  //Read
-
-        resp.setContentType("application/json");
-
-        try {
-
-            PrintWriter writer = resp.getWriter();
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
-            JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
-
-            ArrayList<RegistrationDTO> details = registrationBo.getAllUser();
-            for (RegistrationDTO registrationDTO : details) {
-                JsonObjectBuilder obj = Json.createObjectBuilder();
-                obj.add("userID", registrationDTO.getUserID());
-                obj.add("userName", registrationDTO.getUserName());
-                obj.add("address", registrationDTO.getAddress());
-                obj.add("email", registrationDTO.getEmail());
-                obj.add("contact", registrationDTO.getContact());
-                obj.add("password", registrationDTO.getPassword());
-
-                arrayBuilder.add(obj.build());
-            }
-
-            writer.print(arrayBuilder.build());
-            con.close();
-
-            //System.out.println(check);
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
-//        PrintWriter writer = resp.getWriter();
-//        writer.write("Hi");
-    }
-*/
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException { //Create
 //           System.out.print("Helloeee");
@@ -127,7 +84,6 @@ public class RegistrationServlet extends HttpServlet {
         String password = obj.getString("password");
 
 //             System.out.print(password);
-
         RegistrationDTO registrationDTO = new RegistrationDTO(userID, userName, address, email, contact, password);
         try {
             if (registrationBo.registrationUser(registrationDTO)) {

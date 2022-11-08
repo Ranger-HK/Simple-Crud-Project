@@ -21,18 +21,15 @@ $("#btnLog").click(function () {
         method: 'POST',
 
         data: JSON.stringify(obj),
-//        dataType: json,
         success: function (res) {
             console.log(res);
             if (res.status == 200) {
                 swal("Login success!", "You clicked the button!", "success");
-
-//                alert("Success");
                 window.location = "Home.jsp";
+
             } else {
                 swal("User name or password incorrect!", "You clicked the button!", "error");
 
-//                alert("User name or password incorrect");
             }
         }
     });

@@ -7,7 +7,6 @@
 $("#btnSave").click(function () {
     //console.log("Hello"); 
     registrationUser();
-//    clearRegister();
 
 
 });
@@ -38,7 +37,7 @@ function registrationUser() {
         data: JSON.stringify(user),
         success: function (res) {
             if (res.status == 200) {
-                swal("Operation success!", "You clicked the button!", "success");
+                swal("New User Registration Success!", "You clicked the button!", "success");
                 $("#txtuserID").val("");
                 $("#txtuserName").val("");
                 $("#txtaddress").val("");
@@ -47,15 +46,10 @@ function registrationUser() {
                 $("#txtpassword").val("");
 
 
-//                alert(res.message);
-//                swal("Operation success!", "You clicked the button!", "success");
 
             } else {
-                swal("Operation failed!", "You clicked the button!", "error");
+                swal("New User Registration Failed!", "You clicked the button!", "error");
 
-
-//                alert(res.data);
-//                swal("Operation failed!", "You clicked the button!", "error");
 
             }
 
@@ -65,74 +59,3 @@ function registrationUser() {
         }
     });
 }
-
-//
-//
-//function clearRegister() {
-//    console.log("clearhari");
-//    $("#txtuserID").val("");
-//    $("#txtuserName").val("");
-//    $("#txtaddress").val("");
-//    $("#txtemail").val("");
-//    $("#txtcontact").val("");
-//    $("#txtpassword").val("");
-//
-//}
-
-
-
-
-
-
-//
-//
-/////* global CryptoJS */
-//$("#btnSave").click(function () {
-//    //console.log("Hello"); 
-//    registrationUser();
-//});
-//
-//function registrationUser() {
-//    let userID = $("#txtuserID").val();
-//    let userName = $("#txtuserName").val();
-//    let address = $("#txtaddress").val();
-//    let email = $("#txtemail").val();
-//    let contact = $("#txtcontact").val();
-//    let password = $("#txtpassword").val();
-//
-//   
-//    var cipher = CryptoJS.AES.encrypt(password, "CIPHERKEY").toString();
-//    
-//    var user = {
-//        userID: userID,
-//        userName: userName,
-//        address: address,
-//        email: email,
-//        contact: contact,
-//        password: cipher
-//    };
-//
-// console.log(user.password);
-//    /*----------------------ajax for saveCustomer function---------------------------*/
-//    $.ajax({
-//        url: "http://localhost:8080/Simple_Crud_Project/Registration",
-//        method: "POST",
-//        data: JSON.stringify(user),
-//        success: function (res) {
-//            if (res.status == 200) {
-//                alert(res.message);
-//
-//            } else {
-//                alert(res.data);
-//            }
-//
-//        },
-//        error: function (ob, textStatus, error) {
-//            alert(textStatus);
-//        }
-//    });
-//}
-
-
-
-
