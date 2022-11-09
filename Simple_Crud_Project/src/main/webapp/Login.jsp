@@ -86,7 +86,42 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
-        <script src="controller/LoginController.js"></script>
+        <!--        <script src="controller/LoginController.js"></script>-->
+        <script>
+
+            $("#btnLog").click(function () {
+                //   console.log("Hello"); 
+                var userName = $("#userID").val();
+                var password = $("#password").val();
+
+                //    console.log(userName+" :"+password);
+                obj = {
+                    userName: userName,
+                    password: password
+                };
+
+                //invoked ajax
+                $.ajax({
+                    url: 'http://localhost:8080/Simple_Crud_Project/Login',
+                    method: 'POST',
+
+                    data: JSON.stringify(obj),
+                    success: function (res) {
+                        console.log(res);
+                        if (res.status == 200) {
+                            swal("Login success!", "You clicked the button!", "success");
+                            window.location = "Home.jsp";
+
+                        } else {
+                            swal("User name or password incorrect!", "You clicked the button!", "error");
+
+                        }
+                    }
+                });
+            });
+
+
+        </script>
 
     </body>
 </html>

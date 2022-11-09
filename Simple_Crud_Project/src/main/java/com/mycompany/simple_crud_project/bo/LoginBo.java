@@ -18,8 +18,8 @@ public class LoginBo {
 
     LoginDao loginDao = new LoginDao();
 
-    public boolean equalityUser(String userID, String password) throws ClassNotFoundException, SQLException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException {
-        boolean equal = loginDao.checkEqualityUser(userID, password);
+    public boolean equalityUser(String userName, String password) throws ClassNotFoundException, SQLException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException {
+        boolean equal = loginDao.checkEqualityUser(userName, password);
         if (equal) {
             return true;
         } else {

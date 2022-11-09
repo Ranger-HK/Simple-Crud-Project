@@ -22,12 +22,12 @@ public class LoginDao {
 
     Encryption en = new Encryption();
 
-    public boolean checkEqualityUser(String userID, String password) throws ClassNotFoundException, SQLException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException {
+    public boolean checkEqualityUser(String userName, String password) throws ClassNotFoundException, SQLException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
-        String query = "select * from Registration where userID=?";
+        String query = "select * from Registration where userName=?";
         PreparedStatement pstm = con.prepareStatement(query);
-        pstm.setObject(1, userID);
+        pstm.setObject(1, userName);
 //        pstm.setObject(2, password);
         ResultSet rst = pstm.executeQuery();
 

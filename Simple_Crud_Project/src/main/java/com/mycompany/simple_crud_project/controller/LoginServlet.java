@@ -47,10 +47,10 @@ public class LoginServlet extends HttpServlet {
             JsonObject obj = reader.readObject();
             PrintWriter writer = resp.getWriter();
 
-            String userID = obj.getString("userID");
+            String userName = obj.getString("userName");
             String password = obj.getString("password");
 
-            boolean equal = loginBo.equalityUser(userID, password);
+            boolean equal = loginBo.equalityUser(userName, password);
             if (equal) {
                 JsonObjectBuilder response = Json.createObjectBuilder();
                 response.add("status", 200);
