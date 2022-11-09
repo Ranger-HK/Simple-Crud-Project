@@ -8,12 +8,16 @@ import com.mycompany.simple_crud_project.bo.RegistrationBo;
 import com.mycompany.simple_crud_project.dto.RegistrationDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
 import javax.json.Json;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
@@ -70,7 +74,7 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException { //Create
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, UnsupportedEncodingException { //Create
 //           System.out.print("Helloeee");
         resp.setContentType("application/json");
         PrintWriter writer = resp.getWriter();
@@ -101,6 +105,12 @@ public class RegistrationServlet extends HttpServlet {
             }
 
         } catch (ClassNotFoundException ex) {
+            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvalidKeyException ex) {
+            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalBlockSizeException ex) {
+            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (BadPaddingException ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
 
