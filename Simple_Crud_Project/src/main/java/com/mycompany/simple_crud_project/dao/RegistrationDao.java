@@ -31,7 +31,7 @@ public class RegistrationDao {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
 
-            PreparedStatement pstm = con.prepareStatement("insert into Registration values(?,?,?,?,?,md5(?),?,?)");
+            PreparedStatement pstm = con.prepareStatement("insert into Registration values(?,?,?,?,?,?,?,?)");
             pstm.setObject(1, registration.getUserID());
             pstm.setObject(2, registration.getUserName());
             pstm.setObject(3, registration.getAddress());
@@ -83,7 +83,7 @@ public class RegistrationDao {
         LocalDateTime time = LocalDateTime.now();
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String lastDateTime = time.format(format);
-        PreparedStatement pstm = con.prepareStatement("update Registration set userName=?, address=?, email=?, contact=?, password=md5(?),createTime=?, lastUpdateTime=? where userID=?");
+        PreparedStatement pstm = con.prepareStatement("update Registration set userName=?, address=?, email=?, contact=?, password=?,createTime=?, lastUpdateTime=? where userID=?");
         pstm.setObject(1, registration.getUserName());
         pstm.setObject(2, registration.getAddress());
         pstm.setObject(3, registration.getEmail());

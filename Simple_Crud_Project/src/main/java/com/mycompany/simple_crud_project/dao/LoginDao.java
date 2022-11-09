@@ -19,7 +19,7 @@ public class LoginDao {
     public boolean checkEqualityUser(String userID, String password) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Simple_Crud_Project", "root", "19990202Ravi@:&pra");
-        String query = "select * from Registration where userID=? && password=md5(?)";
+        String query = "select * from Registration where userID=? && password=?";
         PreparedStatement pstm = con.prepareStatement(query);
         pstm.setObject(1, userID);
         pstm.setObject(2, password);
