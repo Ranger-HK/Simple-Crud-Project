@@ -40,7 +40,7 @@ public class RegistrationServlet extends HttpServlet {
     RegistrationBo registrationBo = new RegistrationBo();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {  //Read
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {  //Read /Load
 
         resp.setContentType("application/json");
 
